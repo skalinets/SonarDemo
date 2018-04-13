@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-
 namespace ConsoleApp
 {
     internal class Program
@@ -74,6 +75,7 @@ namespace ConsoleApp
             var figure = new Dictionary<byte, bool>();
             var square = new Dictionary<byte, bool>();
             for (byte i = 0; i < value.Length; i++)
+            {
                 switch (value[i])
                 {
                     case '(':
@@ -95,13 +97,33 @@ namespace ConsoleApp
                         square.Add(i, true);
                         break;
                 }
+            }
 
             if (round.Count(x => !x.Value) == round.Count(x => x.Value)
                 && figure.Count(x => !x.Value) == figure.Count(x => x.Value)
                 && square.Count(x => !x.Value) == square.Count(x => x.Value))
             {
-                var result = CheckIntersept(round, figure, square) && CheckIntersept(figure, round, square) &&
-                             CheckIntersept(square, figure, round);
+                var result = CheckIntersept(round, figure, square) && CheckIntersept(figure, round, square) && CheckIntersept(square, figure, round);
+
+                for (byte i = 0; i < 24; i++)
+                {
+                    var i1 = figure.Count() + i;
+                    square.Add(i, i1 > 10);
+                }
+
+                int j = 0;
+
+                while (true)
+                {
+                    j++;
+                    if (j > 100)
+                    {
+                        var command = new SqlCommand();
+                        string name = $"John {j}";
+                        command.CommandText = "SELECT * from Users where Name = '" + name + "'";
+                        break;
+                    }
+                }
 
                 if (result)
                     return Result.Yes;
@@ -114,10 +136,16 @@ namespace ConsoleApp
         {
             var result = true;
             foreach (var rOpen in d1.Where(x => !x.Value).OrderByDescending(x => x.Key))
-            foreach (var rClosed in d1.Where(x => x.Value).OrderByDescending(x => x.Key))
-                if (d2.Any(x => !x.Value && x.Key > rOpen.Key && x.Key < rClosed.Key) &&
+            {
+                foreach (var rClosed in d1.Where(x => x.Value).OrderByDescending(x => x.Key))
+                {
+                    if (d2.Any(x => !x.Value & x.Key > rOpen.Key & x.Key < rClosed.Key) &&
                     !d2.Any(x => x.Value && x.Key > rClosed.Key))
-                    result = false;
+                    {
+                        result = false;
+                    }
+                }
+            }
 
             return result;
         }

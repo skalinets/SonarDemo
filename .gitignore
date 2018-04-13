@@ -263,3 +263,6 @@ __pycache__/
 /XUnitResults.xml
 /results.xml
 /resharper.xml
+/.sonarqube/
+/dotCover.html
+/dotcover/
