@@ -101,8 +101,7 @@ namespace ConsoleApp
 
             if (round.Count(x => !x.Value) == round.Count(x => x.Value)
                 && figure.Count(x => !x.Value) == figure.Count(x => x.Value)
-                && square.Count(x => !x.Value) == square.Count(x => x.Value))
-            {
+                && square.Count(x => !x.Value) == square.Count(x => x.Value)) {
                 var result = CheckIntersept(round, figure, square) && CheckIntersept(figure, round, square) && CheckIntersept(square, figure, round);
 
                 for (byte i = 0; i < 24; i++)
