@@ -245,7 +245,6 @@
     <Rule Id="S1694" Action="Warning" />
     <Rule Id="S3993" Action="Warning" />
     <Rule Id="S3872" Action="Warning" />
-    <Rule Id="S1451" Action="Warning" />
     <Rule Id="S1450" Action="Warning" />
     <Rule Id="S3990" Action="Warning" />
     <Rule Id="S2306" Action="Warning" />
@@ -304,5 +303,6 @@
     <Rule Id="S1206" Action="Warning" />
     <Rule Id="S3869" Action="Warning" />
     <Rule Id="S1309" Action="None" />
+    <Rule Id="S1451" Action="None" />
   </Rules>
 </RuleSet>

@@ -8,7 +8,7 @@
   <SonarQubeHostUrl>http://192.168.99.100:9000</SonarQubeHostUrl>
   <SonarQubeVersion>7.0.0.36138</SonarQubeVersion>
   <SonarProjectKey>org.sonarqube:sonarqube-scanner-msbuild</SonarProjectKey>
-  <SonarProjectVersion>1.1</SonarProjectVersion>
+  <SonarProjectVersion>1.5</SonarProjectVersion>
   <SonarProjectName>Demo C# Project</SonarProjectName>
   <AdditionalConfig>
     <ConfigSetting Id="BuildUri" />
@@ -83,6 +83,7 @@
   <LocalSettings>
     <Property Name="sonar.host.url">http://192.168.99.100:9000</Property>
     <Property Name="sonar.cs.xunit.reportsPaths">C:\Users\admin\work\SonarDemo\XUnitResults.xml</Property>
+    <Property Name="sonar.cs.opencover.reportsPaths">C:\Users\admin\work\SonarDemo\results.xml</Property>
   </LocalSettings>
   <AnalyzersSettings>
     <AnalyzerSettings>

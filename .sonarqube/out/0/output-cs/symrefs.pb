@@ -1,9 +1,4 @@
-P
-6C:\Users\admin\work\SonarDemo\ConsoleApp\OtherTools.cs
-
- 
-
- ¾
+¾
 3C:\Users\admin\work\SonarDemo\ConsoleApp\Program.cs
 
 		 
@@ -73,11 +68,10 @@ P
 uuM NuuR S(
 vv vv! "vv, -vvA B
 ww ww! "ww, -E
-CC:\Users\admin\work\SonarDemo\ConsoleApp\Properties\AssemblyInfo.csS
-9C:\Users\admin\work\SonarDemo\ConsoleApp\SomeCoolTests.cs
+CC:\Users\admin\work\SonarDemo\ConsoleApp\Properties\AssemblyInfo.cs_
+/C:\Users\admin\work\SonarDemo\ConsoleApp\Sut.cs
 
- 
+ 
 
-
-
- 
+ 
+  ! 

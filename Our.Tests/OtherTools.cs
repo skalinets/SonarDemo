@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace ConsoleApp
+namespace Our.Tests
 {
     public class OtherTools
     {
