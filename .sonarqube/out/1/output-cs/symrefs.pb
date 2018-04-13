@@ -11,5 +11,5 @@ BC:\Users\admin\work\SonarDemo\Our.Tests\Properties\AssemblyInfo.cst
 
  
 
- !
-  %
+ !
+  %
