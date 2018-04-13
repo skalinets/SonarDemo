@@ -1,1 +1,0 @@
-C:\Users\admin\work\SonarDemo\.sonarqube\out\1
