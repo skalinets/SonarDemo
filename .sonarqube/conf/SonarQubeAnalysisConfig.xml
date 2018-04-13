@@ -8,7 +8,7 @@
   <SonarQubeHostUrl>http://192.168.99.100:9000</SonarQubeHostUrl>
   <SonarQubeVersion>7.0.0.36138</SonarQubeVersion>
   <SonarProjectKey>org.sonarqube:sonarqube-scanner-msbuild</SonarProjectKey>
-  <SonarProjectVersion>1.7</SonarProjectVersion>
+  <SonarProjectVersion>1.8</SonarProjectVersion>
   <SonarProjectName>Demo C# Project</SonarProjectName>
   <AdditionalConfig>
     <ConfigSetting Id="BuildUri" />
@@ -84,6 +84,8 @@
     <Property Name="sonar.host.url">http://192.168.99.100:9000</Property>
     <Property Name="sonar.cs.xunit.reportsPaths">C:\Users\admin\work\SonarDemo\XUnitResults.xml</Property>
     <Property Name="sonar.cs.dotcover.reportsPaths">C:\Users\admin\work\SonarDemo\dotCover.html</Property>
+    <Property Name="sonar.resharper.cs.reportPath">C:\Users\admin\work\SonarDemo\resharper.xml</Property>
+    <Property Name="sonar.resharper.solutionFile">C:\Users\admin\work\SonarDemo\SonarDemo.sln</Property>
   </LocalSettings>
   <AnalyzersSettings>
     <AnalyzerSettings>
