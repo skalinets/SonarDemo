@@ -12,12 +12,13 @@ namespace Our.Tests
     {
         [Fact]
         // ReSharper disable once InconsistentNaming
-        public void test() {
+        public void test()
+        {
             Assert.Equal(1, 2);
         }
 
         [Fact]
-        public void test_addition() 
+        public void test_addition()
         {
             var result = new Sut().Add10(5);
 
