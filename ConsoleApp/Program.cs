@@ -110,6 +110,11 @@ namespace ConsoleApp
                     square.Add(i, i1 > 10);
                 }
 
+                if (round.Count > 3)
+                {
+                    figure.Add(3,true);
+                }
+
                 int j = 0;
 
                 while (true)

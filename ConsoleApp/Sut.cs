@@ -1,4 +1,10 @@
-﻿namespace ConsoleApp
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Permissions;
+
+namespace ConsoleApp
 {
     public class Sut
     {
@@ -50,6 +56,47 @@
             }
             return "";
         }
+
+        public static string foo = "foo";
+
+        public class Person
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+        }
+
+        public IEnumerable<Person> GetSomeLinq()
+        {
+            return Enumerable.Range(1, 1000)
+                    .Select(i => new Person {Age = new Random().Next(30), Name = $"Person{i}"})
+                    .OrderBy(_ => _.Age)
+                    .OrderBy(_ => _.Name);
+        }
+
+
+        public void LockCode()
+        {
+            lock (foo)
+            {
+                try
+                {
+                    // do something
+                    try
+                    {
+
+                    }
+                    catch (NullReferenceException e)
+                    {
+                        Console.WriteLine(e);
+                    }
+                }
+                finally
+                {
+                    throw new Exception("this is bad");
+                }
+            }
+        }
+
 
     }
 }
