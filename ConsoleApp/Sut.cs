@@ -73,7 +73,6 @@ namespace ConsoleApp
                     .OrderBy(_ => _.Name);
         }
 
-
         public void LockCode()
         {
             lock (foo)
@@ -96,7 +95,6 @@ namespace ConsoleApp
                 }
             }
         }
-
 
     }
 }

@@ -5,6 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+
 namespace ConsoleApp
 {
     internal class Program
@@ -60,7 +61,6 @@ namespace ConsoleApp
                 if (DateTime.Now.Millisecond % 5 == 2) r += "s";
             }
 
-
             return r;
         }
 
@@ -101,8 +101,10 @@ namespace ConsoleApp
 
             if (round.Count(x => !x.Value) == round.Count(x => x.Value)
                 && figure.Count(x => !x.Value) == figure.Count(x => x.Value)
-                && square.Count(x => !x.Value) == square.Count(x => x.Value)) {
-                var result = CheckIntersept(round, figure, square) && CheckIntersept(figure, round, square) && CheckIntersept(square, figure, round);
+                && square.Count(x => !x.Value) == square.Count(x => x.Value))
+            {
+                var result = CheckIntersept(round, figure, square) && CheckIntersept(figure, round, square) &&
+                             CheckIntersept(square, figure, round);
 
                 for (byte i = 0; i < 24; i++)
                 {
@@ -112,7 +114,7 @@ namespace ConsoleApp
 
                 if (round.Count > 3)
                 {
-                    figure.Add(3,true);
+                    figure.Add(3, true);
                 }
 
                 int j = 0;
@@ -144,7 +146,7 @@ namespace ConsoleApp
                 foreach (var rClosed in d1.Where(x => x.Value).OrderByDescending(x => x.Key))
                 {
                     if (d2.Any(x => !x.Value & x.Key > rOpen.Key & x.Key < rClosed.Key) &&
-                    !d2.Any(x => x.Value && x.Key > rClosed.Key))
+                        !d2.Any(x => x.Value && x.Key > rClosed.Key))
                     {
                         result = false;
                     }
@@ -153,7 +155,6 @@ namespace ConsoleApp
 
             return result;
         }
-
 
         public enum Result
         {
